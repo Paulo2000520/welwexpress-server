@@ -53,6 +53,10 @@ app.use(process.env.BASE_URL, checkoutRouter);
 app.use(notFound);
 app.use(errorHandlerMiddleware);
 
+app.get('/', (req, res) => {
+   res.send('Hello form the server');
+});
+
 const port = process.env.PORT || 3000;
 
 const start = async () => {
